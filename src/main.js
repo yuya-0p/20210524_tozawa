@@ -1,11 +1,27 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import Header from './Header'
+import VueRouter from './router'
+import App from '../src/App.vue'
+import About from '../src/views/About.vue'
 
-Vue.config.productionTip = false
+Vue.use(VueRouter);
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+const routes=[
+  {
+    path:"/",
+    name:"App",
+    Comment:App,
+  },
+  {
+    path:"/src/views/About.vue",
+    name:"About",
+    component:About,
+    props:true,
+  },
+];
+const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes,
+});
+
+export default router;
