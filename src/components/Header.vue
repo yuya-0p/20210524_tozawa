@@ -10,12 +10,12 @@ import axios from "axios";
 export default{
   data(){
     return{
-      childText:""
+      "allAddress": string
     };
   },
   async created(){
     const item =await axios.get(
-      `https://apis.postcode-jp.com/api/v4/postcodes/1000001?appid=qxEhBVhVHB80CB0WbpWU3C2nRESie99uykVp37M
+      `https://apis.postcode-jp.com/api/v4/postcodes/"allAddress":string?appid=qxEhBVhVHB80CB0WbpWU3C2nRESie99uykVp37M
 `
     );
     console.log(item);
