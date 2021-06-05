@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Header @getChildText="showChildText"></Header>
-    <p>Address：{{text}}</p>
+    <p>Address：{{childText}}</p>
   </div>
 </template>
 
