@@ -8,10 +8,15 @@
 <script> 
 import axios from "axios";
 export default{
+  data() {
+        return {
+          childText: ""
+        };
+      },
   methods:{
   async sendRequest(){
       const item =await axios.get(
-        `https://apis.postcode-jp.com/api/v4/postcodes/${data}?&apiKey=qxEhBVhVHB80CB0WbpWU3C2nRESie99uykVp37M`
+        `https://apis.postcode-jp.com/api/v4/postcodes/${this.childText}?&apiKey=qxEhBVhVHB80CB0WbpWU3C2nRESie99uykVp37M`
       );
       console.log(item);
       this.allAddress = item.data[0].allAddress;
