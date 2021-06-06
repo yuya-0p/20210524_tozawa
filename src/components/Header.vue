@@ -22,7 +22,6 @@ export default{
       console.log(item);
       this.allAddress = item.data[0].allAddress;
       this.$emit("getChildText",this.allAddress);
-      const address="allAddress"
   },
  },
 };

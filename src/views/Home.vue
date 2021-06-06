@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <Header @getChildText="showChildText"></Header>
-    <p>Address：{{text}}</p>
   </div>
 </template>
 
