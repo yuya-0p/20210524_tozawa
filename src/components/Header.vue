@@ -18,11 +18,12 @@ export default{
   async sendRequest(){
       const item =await axios.get(
         `https://apis.postcode-jp.com/api/v4/postcodes/${this.childText}?&apiKey=qxEhBVhVHB80CB0WbpWU3C2nRESie99uykVp37M`
-      );
+       );
       console.log(item);
       this.allAddress = item.data[0].allAddress;
       this.$emit("getChildText",this.allAddress);
       const address="allAddress"
   },
+ },
 };
 </script>
