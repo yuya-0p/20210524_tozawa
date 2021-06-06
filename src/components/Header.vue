@@ -9,7 +9,6 @@
 <script> 
 import axios from "axios";
 export default{
-  const str1="allAddress"
   data() {
         return {
           childText: ""
@@ -24,7 +23,8 @@ export default{
       this.allAddress = item.data[0].allAddress;
       sendParent(){
         this.$emit("getChildText",this.allAddress);
-      }
+      };
+      const address="allAddress"
     }
   }
 };
