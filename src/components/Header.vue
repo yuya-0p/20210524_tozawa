@@ -11,7 +11,7 @@ import axios from "axios";
 export default{
   data() {
         return {
-          childText: ""
+          allAddress: ""
         };
       },
   methods:{
@@ -21,11 +21,8 @@ export default{
       );
       console.log(item);
       this.allAddress = item.data[0].allAddress;
-      sendParent(){
-        this.$emit("getChildText",this.allAddress);
-      };
+      this.$emit("getChildText",this.allAddress);
       const address="allAddress"
-    }
-  }
+  },
 };
 </script>
